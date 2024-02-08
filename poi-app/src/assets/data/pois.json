@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "name": "Geschäft XYZ",
+      "type": "Geschäft",
+      "openingHours": "09:00-18:00",
+      "latLng": [51.505, -0.09]
+    },
+    {
+      "id": 2,
+      "name": "Hofladen ABC",
+      "type": "Hofladen",
+      "openingHours": "08:00-20:00",
+      "latLng": [51.515, -0.1]
+    },
+    {
+      "id": 3,
+      "name": "Automat 24/7",
+      "type": "Automat",
+      "latLng": [51.525, -0.11]
+    },
+    {
+      "id": 4,
+      "name": "Spielplatz Zentrum",
+      "type": "Spielplatz",
+      "latLng": [51.535, -0.12]
+    },
+    {
+      "id": 5,
+      "name": "Sehenswürdigkeit",
+      "type": "Sehenswürdigkeit",
+      "latLng": [51.545, -0.13]
+    }
+  ]
+  
