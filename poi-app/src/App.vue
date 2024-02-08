@@ -75,6 +75,18 @@ export default {
 </script>
 
 <style>
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
 /* Stellen Sie sicher, dass die Karten-Icons korrekt geladen werden */
 .leaflet-container {
   background-color: #f0f0f0;
@@ -86,8 +98,8 @@ export default {
 }
 
 .map-container {
-  position: relative;
   height: 100vh;
+  width: 100vw;
 }
 
 .filter-container {
