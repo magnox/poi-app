@@ -12,9 +12,6 @@
   </script>
   
   <style>
-  /* Optional: CSS-Styling für Ihre HomeView */
-  .home {
-    /* Stil-Definitionen hier */
-  }
+  
   </style>
   

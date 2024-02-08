@@ -10,6 +10,9 @@
         <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng">
           <l-popup>{{ poi.name }}</l-popup>
         </l-marker>
+        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng">
+          <l-popup>{{ userLocation.name }}</l-popup>
+        </l-marker>
       </l-map>
     </div>
   </div>
@@ -37,13 +40,36 @@ export default {
       attribution: 'Map data &copy; OpenStreetMap contributors',
       pois,
       filteredPois: pois,
-      poiTypes: Array.from(new Set(pois.map(poi => poi.type)))
+      poiTypes: Array.from(new Set(pois.map(poi => poi.type))),
+      userLocation: null, // Neue Property für die aktuelle Position des Benutzers
     };
   },
   methods: {
     filterPois(selectedTypes) {
       this.filteredPois = this.pois.filter(poi => selectedTypes.includes(poi.type));
-    }
+    },
+    getCurrentLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const userLat = position.coords.latitude;
+          const userLng = position.coords.longitude;
+
+          this.center = [userLat, userLng];
+          this.zoom = 13;
+
+          // Aktualisieren Sie die aktuelle Position des Benutzers separat
+          this.userLocation = { latLng: [userLat, userLng], name: 'Ihre Position' };
+
+        }, () => {
+          alert("Zugriff auf den Standort verweigert. Standardansicht wird verwendet.");
+        });
+      } else {
+        alert("Geolocation wird von diesem Browser nicht unterstützt.");
+      }
+    },
+  },
+  mounted() {
+    this.getCurrentLocation();
   }
 };
 </script>

@@ -4,32 +4,32 @@
     "name": "Geschäft XYZ",
     "type": "Geschäft",
     "openingHours": "09:00-18:00",
-    "latLng": [50.112, 8.682]
+    "latLng": [49.870, 8.934]
   },
   {
     "id": 2,
     "name": "Hofladen ABC",
     "type": "Hofladen",
     "openingHours": "08:00-20:00",
-    "latLng": [50.115, 8.690]
+    "latLng": [49.840, 8.939]
   },
   {
     "id": 3,
     "name": "Automat 24/7",
     "type": "Automat",
-    "latLng": [50.107, 8.675]
+    "latLng": [49.870, 8.984]
   },
   {
     "id": 4,
     "name": "Spielplatz Zentrum",
     "type": "Spielplatz",
-    "latLng": [50.110, 8.681]
+    "latLng": [49.810, 8.914]
   },
   {
     "id": 5,
     "name": "Sehenswürdigkeit",
     "type": "Sehenswürdigkeit",
     "openingHours": "24/7",
-    "latLng": [50.113, 8.685]
+    "latLng": [49.890, 8.994]
   }
 ]
