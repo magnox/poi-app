@@ -6,11 +6,11 @@
         <poi-filter :poiTypes="poiTypes" @update-filter="filterPois"></poi-filter>
       </div>
       <l-map :zoom="zoom" :center="center" style="height: 100vh">
-      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-      <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng">
-        <l-popup>{{ poi.name }}</l-popup>
-      </l-marker>
-    </l-map>
+        <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+        <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng">
+          <l-popup>{{ poi.name }}</l-popup>
+        </l-marker>
+      </l-map>
     </div>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      center: [51.505, -0.09],
+      center: [50.115, 8.690],
       zoom: 13,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: 'Map data &copy; OpenStreetMap contributors',
@@ -72,6 +72,6 @@ export default {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 </style>
