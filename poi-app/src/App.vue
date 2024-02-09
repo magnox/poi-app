@@ -111,5 +111,6 @@ html, body {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-left: 15%;
 }
 </style>
