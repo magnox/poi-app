@@ -7,7 +7,7 @@
       </div>
       <l-map :zoom="zoom" :center="center" style="height: 100vh">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-        <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng">
+        <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng" :icon="getAwesomeMarkerIcon(poi.type)">
           <l-popup>
             <div class="popup-content">
               <div class="popup-header">
@@ -41,9 +41,13 @@
 
 <script>
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PoiFilter from './components/PoiFilter.vue';
 import pois from './assets/data/pois.json';
+import 'leaflet.awesome-markers/dist/leaflet.awesome-markers.js';
+import 'leaflet.awesome-markers/dist/leaflet.awesome-markers.css';
+import 'leaflet.awesome-markers';
 
 export default {
   components: {
@@ -62,7 +66,7 @@ export default {
       pois,
       filteredPois: pois,
       poiTypes: Array.from(new Set(pois.map(poi => poi.type))),
-      userLocation: null, // Neue Property für die aktuelle Position des Benutzers
+      userLocation: null,
     };
   },
   methods: {
@@ -87,6 +91,24 @@ export default {
       } else {
         alert("Geolocation wird von diesem Browser nicht unterstützt.");
       }
+    },
+    getAwesomeMarkerIcon(type) {
+      const markerColor = this.getMarkerColor(type); // Funktion, um die Farbe basierend auf dem Typ zu erhalten
+
+      return L.AwesomeMarkers.icon({
+        // does not work yet icon: 'star', // Ersetzen Sie dies durch das entsprechende Symbol
+        markerColor: markerColor,
+        //prefix: 'glyphicon', 
+      });
+    },
+    getMarkerColor(type) {
+      const typeToColor = {
+        'Geschäft': 'blue',
+        'Hofladen': 'green',
+        // Definieren Sie weitere Typ-Farben
+      };
+
+      return typeToColor[type] || 'red'; // Standardfarbe, wenn kein Typ übereinstimmt
     },
   },
   mounted() {
@@ -180,23 +202,22 @@ body {
 }
 
 .poi-type {
-  background-color: #f0f0f0; /* Hintergrundfarbe für den Typ-Tag */
+  background-color: #f0f0f0;
   border-radius: 10px;
   padding: 2px 6px;
   font-size: 0.8em;
 }
 
 .popup-footer {
-  text-align: right; /* Icons rechts ausrichten */
+  text-align: right;
 }
 
 .icon-link {
-  margin-left: 8px; /* Abstand zwischen den Icons */
+  margin-left: 8px;
 }
 
 /* Optional: Stile für Hover-Effekte auf den Icons */
 .icon-link:hover {
   opacity: 0.7;
 }
-
 </style>
