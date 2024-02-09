@@ -24,6 +24,15 @@
                     }}</a>
                   </div>
                 </div>
+                <div class="info-row" v-if="poi.website">
+                  <div class="info-icon">
+                    <img src="@/assets/icons/language.svg" alt="Website Icon" class="small-icon">
+                  </div>
+                  <div class="info-text">
+                    <a :href="poi.website" target="_blank">{{ poi.website
+                    }}</a>
+                  </div>
+                </div>
                 <div class="info-row" v-if="poi.openingHours">
                   <div class="info-icon">
                     <img src="@/assets/icons/schedule.svg" alt="Clock Icon" class="small-icon">
@@ -40,15 +49,6 @@
                     {{ poi.note }}
                   </div>
                 </div>
-              </div>
-              <div class="popup-footer">
-                <a v-if="poi.website" :href="poi.website" target="_blank" title="Website" class="icon-link">
-                  <img src="@/assets/icons/language.svg" alt="Website Icon" class="icon">
-                </a>
-                <a v-if="poi.address" :href="'https://maps.google.com/?q=' + encodeURI(poi.address)" target="_blank" title="Google Maps"
-                  class="icon-link">
-                  <img src="@/assets/icons/directions.svg" alt="Google Maps Icon" class="icon">
-                </a>
               </div>
             </div>
           </l-popup>
@@ -235,12 +235,13 @@ body {
 }
 
 .info-table {
-  display: table;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-row {
-  display: table-row;
+  display: flex;
+  align-items: center;
   margin-bottom: 5px;
   margin: 5px;
 }
@@ -266,18 +267,8 @@ body {
   margin-left: 10px;
 }
 
-.popup-footer {
-  margin-top: 10px;
-  text-align: right;
-}
-
 .icon-link {
   margin-left: 8px;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
 }
 
 .small-icon {
