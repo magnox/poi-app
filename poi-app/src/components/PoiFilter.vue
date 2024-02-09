@@ -1,7 +1,9 @@
 <template>
   <div class="poi-filter">
-    <div class="chip" v-for="type in poiTypes" :key="type" :style="{ backgroundColor: getColorForType(type) }"
-      :class="{ active: selectedTypes.includes(type) }" @click="toggleSelection(type)">
+    <div class="chip" v-for="type in poiTypes" :key="type"
+      :style="selectedTypes.includes(type) ? { backgroundColor: getColorForType(type) } : {}"
+      :class="{ active: selectedTypes.includes(type), inactive: !selectedTypes.includes(type) }"
+      @click="toggleSelection(type)">
       {{ type }}
     </div>
   </div>
@@ -66,6 +68,11 @@ export default {
 
 .chip.active {
   color: white;
+}
+
+.chip.inactive {
+  background-color: lightgray;
+  color: gray;
 }
 </style>
   

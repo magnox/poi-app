@@ -7,7 +7,6 @@
     "latLng": [49.870, 8.934],
     "note": "Spezialisiert auf lokale Produkte",
     "website": "http://geschaeftxyz.de",
-    "googleMapsLink": "https://www.google.com/maps/place/?q=place_id:ChIJ...",
     "address": "Beispielstraße 1, 12345 Stadt"
   },
   {
@@ -18,7 +17,6 @@
     "latLng": [49.840, 8.939],
     "note": "Bio-zertifizierte Produkte direkt vom Hof",
     "website": "http://hofladenabc.de",
-    "googleMapsLink": "https://www.google.com/maps/place/?q=place_id:ChIJ...",
     "address": "Landweg 5, 12345 Dorf"
   },
   {
@@ -28,7 +26,6 @@
     "latLng": [49.870, 8.984],
     "note": "Rund um die Uhr verfügbar",
     "website": null,
-    "googleMapsLink": "https://www.google.com/maps/place/?q=place_id:ChIJ...",
     "address": "Hauptstraße 2, 12345 Kleinstadt"
   },
   {
@@ -38,7 +35,6 @@
     "latLng": [49.810, 8.914],
     "note": "Kürzlich renoviert mit neuen Spielgeräten",
     "website": null,
-    "googleMapsLink": "https://www.google.com/maps/place/?q=place_id:ChIJ...",
     "address": "Parkallee 3, 12345 Stadt"
   },
   {
@@ -49,7 +45,6 @@
     "latLng": [49.890, 8.994],
     "note": "Bekannt für die atemberaubende Aussicht",
     "website": "http://sehenswuerdigkeit.de",
-    "googleMapsLink": "https://www.google.com/maps/place/?q=place_id:ChIJ...",
     "address": "Aussichtspunkt 4, 12345 Berge"
   }
 ]

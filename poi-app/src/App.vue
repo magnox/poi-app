@@ -14,23 +14,46 @@
                 <h3>{{ poi.name }}</h3>
                 <span class="poi-type">{{ poi.type }}</span>
               </div>
-              <p v-if="poi.address"><strong>Adresse:</strong> {{ poi.address }}</p>
-              <p v-if="poi.openingHours"><strong>Öffnungszeiten:</strong> {{ poi.openingHours }}</p>
-              <p v-if="poi.note"><strong>Notiz:</strong> {{ poi.note }}</p>
+              <div class="info-table">
+                <div class="info-row" v-if="poi.address">
+                  <div class="info-icon">
+                    <img src="@/assets/icons/home.svg" alt="Address Icon" class="small-icon">
+                  </div>
+                  <div class="info-text">
+                    <a :href="'https://maps.google.com/?q=' + encodeURI(poi.address)" target="_blank">{{ poi.address
+                    }}</a>
+                  </div>
+                </div>
+                <div class="info-row" v-if="poi.openingHours">
+                  <div class="info-icon">
+                    <img src="@/assets/icons/schedule.svg" alt="Clock Icon" class="small-icon">
+                  </div>
+                  <div class="info-text">
+                    {{ poi.openingHours }}
+                  </div>
+                </div>
+                <div class="info-row" v-if="poi.note">
+                  <div class="info-icon">
+                    <img src="@/assets/icons/description.svg" alt="Note Icon" class="small-icon">
+                  </div>
+                  <div class="info-text">
+                    {{ poi.note }}
+                  </div>
+                </div>
+              </div>
               <div class="popup-footer">
                 <a v-if="poi.website" :href="poi.website" target="_blank" title="Website" class="icon-link">
-                  <img src="@/assets/icons/language.svg" alt="Website">
+                  <img src="@/assets/icons/language.svg" alt="Website Icon" class="icon">
                 </a>
-                <a v-if="poi.googleMapsLink" :href="poi.googleMapsLink" target="_blank" title="Google Maps"
+                <a v-if="poi.address" :href="'https://maps.google.com/?q=' + encodeURI(poi.address)" target="_blank" title="Google Maps"
                   class="icon-link">
-                  <img src="@/assets/icons/directions.svg" alt="Google Maps">
+                  <img src="@/assets/icons/directions.svg" alt="Google Maps Icon" class="icon">
                 </a>
               </div>
             </div>
           </l-popup>
 
         </l-marker>
-
         <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()">
           <!--<l-popup>{{ userLocation.name }}</l-popup>-->
         </l-marker>
@@ -112,7 +135,7 @@ export default {
       const iconAnchor = [16, 32];
 
       const customIcon = L.icon({
-        iconUrl: '/assets/icons/my_location.svg', 
+        iconUrl: '/assets/icons/my_location.svg',
         iconSize: iconSize,
         iconAnchor: iconAnchor,
       });
@@ -211,14 +234,40 @@ body {
   align-items: center;
 }
 
+.info-table {
+  display: table;
+  width: 100%;
+}
+
+.info-row {
+  display: table-row;
+  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.info-icon {
+  display: table-cell;
+  padding-right: 10px;
+}
+
+.info-text {
+  display: table-cell;
+}
+
+.info-text a {
+  color: black;
+}
+
 .poi-type {
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 2px 6px;
   font-size: 0.8em;
+  margin-left: 10px;
 }
 
 .popup-footer {
+  margin-top: 10px;
   text-align: right;
 }
 
@@ -226,8 +275,13 @@ body {
   margin-left: 8px;
 }
 
-/* Optional: Stile für Hover-Effekte auf den Icons */
-.icon-link:hover {
-  opacity: 0.7;
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.small-icon {
+  width: 16px;
+  height: 16px;
 }
 </style>
