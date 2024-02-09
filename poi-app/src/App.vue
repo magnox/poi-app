@@ -8,8 +8,29 @@
       <l-map :zoom="zoom" :center="center" style="height: 100vh">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
         <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng">
-          <l-popup>{{ poi.name }}</l-popup>
+          <l-popup>
+            <div class="popup-content">
+              <div class="popup-header">
+                <h3>{{ poi.name }}</h3>
+                <span class="poi-type">{{ poi.type }}</span>
+              </div>
+              <p v-if="poi.address"><strong>Adresse:</strong> {{ poi.address }}</p>
+              <p v-if="poi.openingHours"><strong>Öffnungszeiten:</strong> {{ poi.openingHours }}</p>
+              <p v-if="poi.note"><strong>Notiz:</strong> {{ poi.note }}</p>
+              <div class="popup-footer">
+                <a v-if="poi.website" :href="poi.website" target="_blank" title="Website" class="icon-link">
+                  <img src="@/assets/icons/language.svg" alt="Website">
+                </a>
+                <a v-if="poi.googleMapsLink" :href="poi.googleMapsLink" target="_blank" title="Google Maps"
+                  class="icon-link">
+                  <img src="@/assets/icons/directions.svg" alt="Google Maps">
+                </a>
+              </div>
+            </div>
+          </l-popup>
+
         </l-marker>
+
         <l-marker v-if="userLocation" :lat-lng="userLocation.latLng">
           <l-popup>{{ userLocation.name }}</l-popup>
         </l-marker>
@@ -75,8 +96,8 @@ export default {
 </script>
 
 <style>
-
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   height: 100%;
@@ -113,4 +134,69 @@ html, body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-left: 15%;
 }
+
+/* Popup-Container Stil */
+.l-popup-content {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 250px;
+}
+
+.l-popup-content h3 {
+  color: #007BFF;
+  margin-bottom: 8px;
+}
+
+.l-popup-content p {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.l-popup-content a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007BFF;
+  margin-top: 8px;
+}
+
+.l-popup-content a img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.l-popup-content a:hover {
+  text-decoration: underline;
+}
+
+.popup-content {
+  position: relative;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poi-type {
+  background-color: #f0f0f0; /* Hintergrundfarbe für den Typ-Tag */
+  border-radius: 10px;
+  padding: 2px 6px;
+  font-size: 0.8em;
+}
+
+.popup-footer {
+  text-align: right; /* Icons rechts ausrichten */
+}
+
+.icon-link {
+  margin-left: 8px; /* Abstand zwischen den Icons */
+}
+
+/* Optional: Stile für Hover-Effekte auf den Icons */
+.icon-link:hover {
+  opacity: 0.7;
+}
+
 </style>
