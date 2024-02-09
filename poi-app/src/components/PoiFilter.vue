@@ -1,7 +1,7 @@
 <template>
   <div class="poi-filter">
-    <div class="chip" v-for="type in poiTypes" :key="type" :class="{ active: selectedTypes.includes(type) }"
-      @click="toggleSelection(type)">
+    <div class="chip" v-for="type in poiTypes" :key="type" :style="{ backgroundColor: getColorForType(type) }"
+      :class="{ active: selectedTypes.includes(type) }" @click="toggleSelection(type)">
       {{ type }}
     </div>
   </div>
@@ -34,6 +34,12 @@ export default {
       }
       this.$emit('update-filter', this.selectedTypes);
     },
+    getColorForType(type) {
+      const hash = Array.from(type).reduce((acc, char) => char.charCodeAt(0) + acc, 0);
+      const colors = ['red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'indigo', 'cadetblue'];
+      const randomIndex = Math.floor(Math.abs(Math.sin(hash) * colors.length) % colors.length);
+      return colors[randomIndex];
+    },
   },
   watch: {
     poiTypes(newVal) {
@@ -45,8 +51,6 @@ export default {
   },
 };
 </script>
-
-
   
 <style scoped>
 .chip {
@@ -61,9 +65,7 @@ export default {
 }
 
 .chip.active {
-  background-color: #007BFF;
   color: white;
-  border-color: #007BFF;
 }
 </style>
   

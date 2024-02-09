@@ -93,7 +93,7 @@ export default {
       }
     },
     getAwesomeMarkerIcon(type) {
-      const markerColor = this.getMarkerColor(type); // Funktion, um die Farbe basierend auf dem Typ zu erhalten
+      const markerColor = this.getColorForType(type);
 
       return L.AwesomeMarkers.icon({
         // does not work yet icon: 'star', // Ersetzen Sie dies durch das entsprechende Symbol
@@ -101,14 +101,11 @@ export default {
         //prefix: 'glyphicon', 
       });
     },
-    getMarkerColor(type) {
-      const typeToColor = {
-        'Geschäft': 'blue',
-        'Hofladen': 'green',
-        // Definieren Sie weitere Typ-Farben
-      };
-
-      return typeToColor[type] || 'red'; // Standardfarbe, wenn kein Typ übereinstimmt
+    getColorForType(type) {
+      const hash = Array.from(type).reduce((acc, char) => char.charCodeAt(0) + acc, 0);
+      const colors = ['red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpurple', 'cadetblue'];
+      const randomIndex = Math.floor(Math.abs(Math.sin(hash) * colors.length) % colors.length);
+      return colors[randomIndex];
     },
   },
   mounted() {
@@ -116,6 +113,7 @@ export default {
   }
 };
 </script>
+
 
 <style>
 html,
