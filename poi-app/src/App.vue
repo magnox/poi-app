@@ -31,8 +31,8 @@
 
         </l-marker>
 
-        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng">
-          <l-popup>{{ userLocation.name }}</l-popup>
+        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()">
+          <!--<l-popup>{{ userLocation.name }}</l-popup>-->
         </l-marker>
       </l-map>
     </div>
@@ -106,6 +106,18 @@ export default {
       const colors = ['red', 'darkred', 'orange', 'green', 'darkgreen', 'blue', 'purple', 'darkpurple', 'cadetblue'];
       const randomIndex = Math.floor(Math.abs(Math.sin(hash) * colors.length) % colors.length);
       return colors[randomIndex];
+    },
+    getUserLocationIcon() {
+      const iconSize = [32, 32];
+      const iconAnchor = [16, 32];
+
+      const customIcon = L.icon({
+        iconUrl: '/assets/icons/my_location.svg', 
+        iconSize: iconSize,
+        iconAnchor: iconAnchor,
+      });
+
+      return customIcon;
     },
   },
   mounted() {
