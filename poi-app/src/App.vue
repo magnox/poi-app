@@ -100,13 +100,7 @@ export default {
           const userLat = position.coords.latitude;
           const userLng = position.coords.longitude;
 
-          /*this.$refs.mapRef.mapObject.flyTo([userLat, userLng], 13, {
-            duration: 1,
-            animate: true,
-            easeLinearity: 0.25,
-          });*/
-          this.center = [userLat, userLng];
-          this.zoom = 13;
+          this.animateMapToNewCenter([userLat, userLng], 13);
 
           this.userLocation = { latLng: [userLat, userLng], name: 'Ihre Position' };
 
@@ -116,6 +110,13 @@ export default {
       } else {
         alert("Geolocation wird von diesem Browser nicht unterstützt.");
       }
+    },
+    animateMapToNewCenter(center, zoom) {
+        this.$refs.mapRef.leafletObject.flyTo(center, zoom, {
+          animate: true,
+          duration: 1,
+          easeLinearity: 0.25,
+        });
     },
     getAwesomeMarkerIcon(type) {
       const markerColor = this.getColorForType(type);
