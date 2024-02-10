@@ -46,5 +46,55 @@
     "note": "Bekannt für die atemberaubende Aussicht",
     "website": "http://sehenswuerdigkeit.de",
     "address": "Aussichtspunkt 4, 12345 Berge"
+  },
+  {
+    "id": 6,
+    "name": "Bäckerei Sonnenschein",
+    "type": "Bäckerei",
+    "openingHours": "07:00-18:00",
+    "latLng": [49.865, 8.930],
+    "note": "Bietet frisches Brot und Gebäck",
+    "website": "http://baeckereisonnenschein.de",
+    "address": "Hauptstraße 10, 12345 Stadt"
+  },
+  {
+    "id": 7,
+    "name": "Restaurant Zum Grünen Tal",
+    "type": "Restaurant",
+    "openingHours": "11:30-22:00",
+    "latLng": [49.855, 8.935],
+    "note": "Traditionelle Küche mit regionalen Spezialitäten",
+    "website": "http://restaurant-gruenestal.de",
+    "address": "Waldweg 3, 12345 Dorf"
+  },
+  {
+    "id": 8,
+    "name": "Fitnessstudio Vitality",
+    "type": "Fitnessstudio",
+    "openingHours": "06:00-22:00",
+    "latLng": [49.865, 8.950],
+    "note": "Modernes Fitnessstudio mit breitem Kursangebot",
+    "website": "http://fitnessstudio-vitality.de",
+    "address": "Sportplatzstraße 8, 12345 Kleinstadt"
+  },
+  {
+    "id": 9,
+    "name": "Kino Paradiso",
+    "type": "Kino",
+    "openingHours": "16:00-00:00",
+    "latLng": [49.845, 8.925],
+    "note": "Zeigt aktuelle Filme in gemütlicher Atmosphäre",
+    "website": "http://kino-paradiso.de",
+    "address": "Kinoweg 1, 12345 Stadt"
+  },
+  {
+    "id": 10,
+    "name": "Bücherei Leseoase mit langem Namen",
+    "type": "Bücherei",
+    "openingHours": "10:00-18:00",
+    "latLng": [49.875, 8.940],
+    "note": "Große Auswahl an Büchern für alle Altersgruppen und Bücher mit sehr langen Geschichten, die richtig dick werden können, weil dort so viele Seiten voller Geschichten sind.",
+    "website": "http://buechereileseoase.de",
+    "address": "Bücherweg 5, 12345 Berge hinter dem großen See im Tal"
   }
 ]
