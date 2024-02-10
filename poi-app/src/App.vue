@@ -5,7 +5,7 @@
       <div class="filter-container">
         <poi-filter :poiTypes="poiTypes" @update-filter="filterPois"></poi-filter>
       </div>
-      <l-map :zoom="zoom" :center="center" style="height: 100vh">
+      <l-map ref="mapRef" :zoom="zoom" :center="center" style="height: 100vh">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
         <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng" :icon="getAwesomeMarkerIcon(poi.type)">
           <l-popup>
@@ -20,7 +20,7 @@
                     <img src="@/assets/icons/home.svg" alt="Address Icon" class="small-icon">
                   </div>
                   <div class="info-text">
-                    <a :href="'https://maps.google.com/?q=' + encodeURI(poi.address)" target="_blank">{{ poi.address
+                    <a :href="'https://maps.google.com/?q=' + encodeURI(poi.name + ', ' + poi.address)" target="_blank">{{ poi.address
                     }}</a>
                   </div>
                 </div>
@@ -54,9 +54,7 @@
           </l-popup>
 
         </l-marker>
-        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()">
-          <!--<l-popup>{{ userLocation.name }}</l-popup>-->
-        </l-marker>
+        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()"/>
       </l-map>
     </div>
   </div>
@@ -82,8 +80,8 @@ export default {
   },
   data() {
     return {
-      center: [50.115, 8.690],
-      zoom: 13,
+      center: [51.164, 10.454],
+      zoom: 6,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: 'Map data &copy; OpenStreetMap contributors',
       pois,
@@ -102,10 +100,14 @@ export default {
           const userLat = position.coords.latitude;
           const userLng = position.coords.longitude;
 
+          /*this.$refs.mapRef.mapObject.flyTo([userLat, userLng], 13, {
+            duration: 1,
+            animate: true,
+            easeLinearity: 0.25,
+          });*/
           this.center = [userLat, userLng];
           this.zoom = 13;
 
-          // Aktualisieren Sie die aktuelle Position des Benutzers separat
           this.userLocation = { latLng: [userLat, userLng], name: 'Ihre Position' };
 
         }, () => {
@@ -237,13 +239,15 @@ body {
 .info-table {
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  background-color: #fafafa;
+  border-radius: 10px;
 }
 
 .info-row {
   display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-  margin: 5px;
+  align-items: normal;
+  margin: 4px;
 }
 
 .info-icon {
