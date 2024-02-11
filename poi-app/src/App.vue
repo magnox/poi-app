@@ -100,9 +100,9 @@ export default {
           const userLat = position.coords.latitude;
           const userLng = position.coords.longitude;
 
-          this.animateMapToNewCenter([userLat, userLng], 13);
+          this.animateMapToNewCenter([userLat, userLng], 14);
 
-          this.userLocation = { latLng: [userLat, userLng], name: 'Ihre Position' };
+          this.userLocation = { latLng: [userLat, userLng], name: 'Aktuelle Position' };
 
         }, () => {
           alert("Zugriff auf den Standort verweigert. Standardansicht wird verwendet.");
