@@ -80,8 +80,8 @@ export default {
   },
   data() {
     return {
-      center: [51.164, 10.454],
-      zoom: 6,
+      center: [49.8683, 8.9290],
+      zoom: 13,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution: 'Map data &copy; OpenStreetMap contributors',
       pois,
@@ -100,7 +100,7 @@ export default {
           const userLat = position.coords.latitude;
           const userLng = position.coords.longitude;
 
-          this.animateMapToNewCenter([userLat, userLng], 14);
+          this.animateMapToNewCenter([userLat, userLng], 15);
 
           this.userLocation = { latLng: [userLat, userLng], name: 'Aktuelle Position' };
 
