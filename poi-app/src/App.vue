@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">
-    <div class="map-container" style="position: relative; height: 100vh;">
+    <div class="map-container" style="position: relative; height: 100%;">
       <div class="filter-container">
         <poi-filter :poiTypes="poiTypes" @update-filter="filterPois"></poi-filter>
       </div>
@@ -20,7 +20,8 @@
                     <img src="@/assets/icons/home.svg" alt="Address Icon" class="small-icon">
                   </div>
                   <div class="info-text">
-                    <a :href="'https://maps.google.com/?q=' + encodeURI(poi.name + ', ' + poi.address)" target="_blank">{{ poi.address
+                    <a :href="'https://maps.google.com/?q=' + encodeURI(poi.name + ', ' + poi.address)" target="_blank">{{
+                      poi.address
                     }}</a>
                   </div>
                 </div>
@@ -53,9 +54,10 @@
             </div>
           </l-popup>
         </l-marker>
-        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()"/>
+        <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()" />
       </l-map>
-      <button class="zoom-back-button" @click="zoomToUserLocation"><img src="/assets/icons/my_location.svg" alt="Meine Position" /></button>
+      <button class="zoom-back-button" @click="zoomToUserLocation"><img src="/assets/icons/my_location.svg"
+          alt="Meine Position" /></button>
     </div>
   </div>
 </template>
@@ -112,11 +114,11 @@ export default {
       }
     },
     animateMapToNewCenter(center, zoom) {
-        this.$refs.mapRef.leafletObject.flyTo(center, zoom, {
-          animate: true,
-          duration: 1,
-          easeLinearity: 0.25,
-        });
+      this.$refs.mapRef.leafletObject.flyTo(center, zoom, {
+        animate: true,
+        duration: 1,
+        easeLinearity: 0.25,
+      });
     },
     getAwesomeMarkerIcon(type) {
       const markerColor = this.getColorForType(type);
@@ -295,10 +297,10 @@ body {
   right: 10px;
   z-index: 1000;
   padding: 10px 10px 6px 10px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 </style>
