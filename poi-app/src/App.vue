@@ -52,10 +52,10 @@
               </div>
             </div>
           </l-popup>
-
         </l-marker>
         <l-marker v-if="userLocation" :lat-lng="userLocation.latLng" :icon="getUserLocationIcon()"/>
       </l-map>
+      <button class="zoom-back-button" @click="zoomToUserLocation"><img src="/assets/icons/my_location.svg" alt="Meine Position" /></button>
     </div>
   </div>
 </template>
@@ -144,6 +144,13 @@ export default {
       });
 
       return customIcon;
+    },
+    zoomToUserLocation() {
+      if (this.userLocation && this.userLocation.latLng) {
+        this.animateMapToNewCenter(this.userLocation.latLng, 15);
+      } else {
+        alert("Position nicht verfügbar. Bitte erlauben Sie den Zugriff auf Ihren Standort.");
+      }
     },
   },
   mounted() {
@@ -279,5 +286,18 @@ body {
 .small-icon {
   width: 16px;
   height: 16px;
+}
+
+.zoom-back-button {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px 10px 6px 10px;
+  background-color: rgba(255,255,255,0.9);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 </style>
