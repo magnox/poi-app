@@ -1,100 +1,157 @@
 [
   {
     "id": 1,
-    "name": "Geschäft XYZ",
-    "type": "Geschäft",
-    "openingHours": "09:00-18:00",
-    "latLng": [49.870, 8.934],
-    "note": "Spezialisiert auf lokale Produkte",
-    "website": "http://geschaeftxyz.de",
-    "address": "Beispielstraße 1, 12345 Stadt"
+    "name": "Spielplatz Röhricheck",
+    "type": "Spielplatz",
+    "latLng": [49.920812880164796, 8.991153170169223],
+    "address": "Schaafheim",
+    "note": ""
   },
   {
     "id": 2,
-    "name": "Hofladen ABC",
-    "type": "Hofladen",
-    "openingHours": "08:00-20:00",
-    "latLng": [49.840, 8.939],
-    "note": "Bio-zertifizierte Produkte direkt vom Hof",
-    "website": "http://hofladenabc.de",
-    "address": "Landweg 5, 12345 Dorf"
+    "name": "Spielplatz Schlossgarten",
+    "type": "Spielplatz",
+    "latLng": [49.89527652194212, 8.83763394133179],
+    "address": "Dieburf",
+    "note": ""
   },
   {
     "id": 3,
-    "name": "Automat 24/7",
-    "type": "Automat",
-    "latLng": [49.870, 8.984],
-    "note": "Rund um die Uhr verfügbar",
-    "website": null,
-    "address": "Hauptstraße 2, 12345 Kleinstadt"
+    "name": "Kinderspielplatz Schloß Fechenbach",
+    "type": "Spielplatz",
+    "latLng": [49.90007839250157, 8.837485783660176],
+    "address": "Dieburg",
+    "note": "Riesige Kletternetze"
   },
   {
     "id": 4,
-    "name": "Spielplatz Zentrum",
+    "name": "Kinderspielplatz Breuberger Weg",
     "type": "Spielplatz",
-    "latLng": [49.810, 8.914],
-    "note": "Kürzlich renoviert mit neuen Spielgeräten",
-    "website": null,
-    "address": "Parkallee 3, 12345 Stadt"
+    "latLng": [49.92392058273798, 8.949020010645874],
+    "address": "Langstadt",
+    "note": ""
   },
   {
     "id": 5,
-    "name": "Sehenswürdigkeit",
-    "type": "Sehenswürdigkeit",
-    "openingHours": "24/7",
-    "latLng": [49.890, 8.994],
-    "note": "Bekannt für die atemberaubende Aussicht",
-    "website": "http://sehenswuerdigkeit.de",
-    "address": "Aussichtspunkt 4, 12345 Berge"
+    "name": "Spielplatz Alte Mainzer Landstraße",
+    "type": "Spielplatz",
+    "latLng": [49.89842170108816, 8.821796368316317],
+    "address": "Dieburg",
+    "note": ""
+  },
+  {
+    "id": 5,
+    "name": "Freizeitzentrum Spießfeld",
+    "type": "Spielplatz",
+    "latLng": [49.89564062079495, 8.80655951249589],
+    "address": "Dieburg",
+    "note": ""
   },
   {
     "id": 6,
-    "name": "Bäckerei Sonnenschein",
-    "type": "Bäckerei",
-    "openingHours": "07:00-18:00",
-    "latLng": [49.865, 8.930],
-    "note": "Bietet frisches Brot und Gebäck",
-    "website": "http://baeckereisonnenschein.de",
-    "address": "Hauptstraße 10, 12345 Stadt"
+    "name": "Kinderspielplatz Ernie",
+    "type": "Spielplatz",
+    "latLng": [49.867234025690266, 8.919730258525595],
+    "address": "Groß-Umstadt",
+    "note": ""
   },
   {
     "id": 7,
-    "name": "Restaurant Zum Grünen Tal",
-    "type": "Restaurant",
-    "openingHours": "11:30-22:00",
-    "latLng": [49.855, 8.935],
-    "note": "Traditionelle Küche mit regionalen Spezialitäten",
-    "website": "http://restaurant-gruenestal.de",
-    "address": "Waldweg 3, 12345 Dorf"
+    "name": "Spielplatz Ringstraße",
+    "type": "Spielplatz",
+    "latLng": [49.89284350612289, 8.937384670167623],
+    "address": "Klein-Umstadt",
+    "note": "Mit Trampolin"
   },
   {
     "id": 8,
-    "name": "Fitnessstudio Vitality",
-    "type": "Fitnessstudio",
-    "openingHours": "06:00-22:00",
-    "latLng": [49.865, 8.950],
-    "note": "Modernes Fitnessstudio mit breitem Kursangebot",
-    "website": "http://fitnessstudio-vitality.de",
-    "address": "Sportplatzstraße 8, 12345 Kleinstadt"
+    "name": "Spielplatz am Weiher",
+    "type": "Spielplatz",
+    "latLng": [49.888113819051654, 8.950378525987558],
+    "address": "Klein-Umstadt",
+    "note": "Sehr klein, mit Wasserpumpe"
   },
   {
     "id": 9,
-    "name": "Kino Paradiso",
-    "type": "Kino",
-    "openingHours": "16:00-00:00",
-    "latLng": [49.845, 8.925],
-    "note": "Zeigt aktuelle Filme in gemütlicher Atmosphäre",
-    "website": "http://kino-paradiso.de",
-    "address": "Kinoweg 1, 12345 Stadt"
+    "name": "Spielplatz am Bürgerhaus",
+    "type": "Spielplatz",
+    "latLng": [49.90389484607503, 8.9556077264467],
+    "address": "Kleestadt",
+    "note": "Schöne Wasserlandschaft"
   },
   {
     "id": 10,
-    "name": "Bücherei Leseoase mit langem Namen",
-    "type": "Bücherei",
-    "openingHours": "10:00-18:00",
-    "latLng": [49.875, 8.940],
-    "note": "Große Auswahl an Büchern für alle Altersgruppen und Bücher mit sehr langen Geschichten, die richtig dick werden können, weil dort so viele Seiten voller Geschichten sind.",
-    "website": "http://buechereileseoase.de",
-    "address": "Bücherweg 5, 12345 Berge hinter dem großen See im Tal"
+    "name": "Spielplatz",
+    "type": "Spielplatz",
+    "latLng": [49.8378382775889, 8.907008695818217],
+    "address": "Otzberg-Lengfeld",
+    "note": "Hohe Spielgeräte"
+  },
+  {
+    "id": 11,
+    "name": "Spielplatz Hamster-Rad",
+    "type": "Spielplatz",
+    "latLng": [49.890172365285174, 8.923428439479915],
+    "address": "Richen",
+    "note": "Viel Sonne"
+  },
+  {
+    "id": 12,
+    "name": "Spielplatz Stettiner Straße",
+    "type": "Spielplatz",
+    "latLng": [49.880221637138675, 8.918138454823087],
+    "address": "Richen",
+    "note": ""
+  },
+  {
+    "id": 13,
+    "name": "Spielplatz Weinbergstraße",
+    "type": "Spielplatz",
+    "latLng": [49.889042278451875, 8.944857354823599],
+    "address": "Klein-Umstadt",
+    "note": "Große Rutsche, Wasserpumpe"
+  },
+  {
+    "id": 14,
+    "name": "Spielplatz",
+    "type": "Spielplatz",
+    "latLng": [49.872843659019274, 8.925939954822654],
+    "address": "Heinrich-Heine-Str., Groß-Umstadt",
+    "note": "Wasserpumpe"
+  },
+  {
+    "id": 15,
+    "name": "Spielplatz In der Aue",
+    "type": "Spielplatz",
+    "latLng": [49.88739577182032, 8.92150289715161],
+    "address": "Richen",
+    "note": "Mit See"
+  },
+  {
+    "id": 16,
+    "name": "Heichelberghof",
+    "type": "Hofladen",
+    "openingHours": "Di & Fr 15:00 - 18:30 Uhr\nSa 9:30 - 12:00 Uhr",
+    "latLng": [49.888722879595385, 8.947555655222926],
+    "note": "Im Sommer jeden Freitag Hofcafé",
+    "website": "https://www.heichelberghof.de/",
+    "address": "Bahnhofstr. 26, 64823 Klein-Umstadt"
+  },
+  {
+    "id": 17,
+    "name": "Bauernhof Funk",
+    "type": "Hofladen",
+    "latLng": [49.92206417415205, 8.942541240400063],
+    "note": "Guter Spargel",
+    "website": "https://www.bauer-funk.de/",
+    "address": "Außerhalb Langstadt 16, 64832 Babenhausen"
+  },
+  {
+    "id": 18,
+    "name": "Bauernhof Funk Verkaufsautomat",
+    "type": "SB-Automat",
+    "latLng": [49.922393007985555, 8.94289738422401],
+    "website": "https://www.bauer-funk.de/",
+    "address": "Außerhalb Langstadt 16, 64832 Babenhausen"
   }
 ]

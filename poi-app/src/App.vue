@@ -265,6 +265,7 @@ body {
 
 .info-text {
   display: table-cell;
+  white-space: pre-wrap;
 }
 
 .info-text a {
