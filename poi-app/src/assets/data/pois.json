@@ -153,5 +153,19 @@
     "latLng": [49.922393007985555, 8.94289738422401],
     "website": "https://www.bauer-funk.de/",
     "address": "Außerhalb Langstadt 16, 64832 Babenhausen"
+  },
+  {
+    "id": 19,
+    "name": "Klettersteig",
+    "type": "Natur-Spielplatz",
+    "latLng": [49.86842410921639, 8.943900952911685],
+    "address": "Groß-Umstadt"
+  },
+  {
+    "id": 20,
+    "name": "Spielplatz",
+    "type": "Spielplatz",
+    "latLng": [49.90000141708051, 8.946065831906793],
+    "address": "Berliner Str. 1, Kleestadt"
   }
 ]
