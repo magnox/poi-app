@@ -62,6 +62,8 @@
   </div>
 </template>
 
+<link rel="manifest" href="/manifest.json"/>
+
 <script>
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet';
 import L from 'leaflet';
@@ -124,7 +126,7 @@ export default {
       const markerColor = this.getColorForType(type);
 
       return L.AwesomeMarkers.icon({
-        // does not work yet icon: 'star', // Ersetzen Sie dies durch das entsprechende Symbol
+        //icon: 'home', // icons somehow not working
         markerColor: markerColor,
         //prefix: 'glyphicon', 
       });
