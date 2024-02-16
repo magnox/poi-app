@@ -5,7 +5,7 @@
       <div class="filter-container">
         <poi-filter :poiTypes="poiTypes" @update-filter="filterPois"></poi-filter>
       </div>
-      <l-map ref="mapRef" :zoom="zoom" :center="center" style="height: 100vh">
+      <l-map ref="mapRef" :zoom="zoom" :center="center" style="height: 100%">
         <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
         <l-marker v-for="poi in filteredPois" :key="poi.id" :lat-lng="poi.latLng" :icon="getAwesomeMarkerIcon(poi.type)">
           <l-popup>
