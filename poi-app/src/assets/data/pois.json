@@ -167,5 +167,42 @@
     "type": "Spielplatz",
     "latLng": [49.90000141708051, 8.946065831906793],
     "address": "Berliner Str. 1, Kleestadt"
+  },
+  {
+    "id": 21,
+    "name": "Straußenfarm Tannenhof",
+    "type": "Hofladen",
+    "latLng": [49.90198026951913, 8.997079455413763],
+    "website": "https://straussenfarm-tannenhof.de/",
+    "address": "Außerhalb 14, Schaafheim"
+  },
+  {
+    "id": 22,
+    "name": "Strauße",
+    "type": "Tiere",
+    "latLng": [49.901826690011944, 8.996192038506342],
+    "website": "https://straussenfarm-tannenhof.de/",
+    "address": "Außerhalb 14, Schaafheim"
+  },
+  {
+    "id": 23,
+    "name": "Galloway Rinder",
+    "type": "Tiere",
+    "latLng": [49.88204521770625, 8.943457140386847],
+    "address": "Klein-Umstadt"
+  },
+  {
+    "id": 24,
+    "name": "Wildpferde",
+    "type": "Tiere",
+    "latLng": [49.94921160908789, 8.963189923236445],
+    "address": "Babenhausen"
+  },
+  {
+    "id": 25,
+    "name": "Ziegen",
+    "type": "Tiere",
+    "latLng": [49.895752808562136, 8.943933531114627],
+    "address": "Wendelinusschule, Klein-Umstadt"
   }
 ]
