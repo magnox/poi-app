@@ -200,9 +200,33 @@
   },
   {
     "id": 25,
-    "name": "Ziegen",
+    "name": "2 Ziegen",
     "type": "Tiere",
     "latLng": [49.895752808562136, 8.943933531114627],
     "address": "Wendelinusschule, Klein-Umstadt"
+  },
+  {
+    "id": 26,
+    "name": "Dammwild-Gehege",
+    "type": "Tiere",
+    "latLng": [50.01530894559816, 8.983902459051299],
+    "address": "Bahnhofstraße 109B, 63533 Mainhausen",
+    "note": "Einfaches Gehege mit vielen Tieren"
+  },
+  {
+    "id": 26,
+    "name": "Lilienhof Alpakas",
+    "type": "Tiere",
+    "openingHours": "Samstag, 14:00–17:00 Uhr",
+    "latLng": [49.96001610095117, 8.944949840384684],
+    "address": "Langenbrücker Weg 8, 64832 Babenhausen"
+  },
+  {
+    "id": 27,
+    "name": "Wildpark Alte Fasanerie",
+    "type": "Tiere",
+    "website": "https://www.hessen-forst.de/freizeit/wildpark-alte-fasanerie-hanau",
+    "latLng": [50.08535130157038, 8.91170376922434],
+    "address": "Fasaneriestraße 106, 63456 Hanau"
   }
 ]
