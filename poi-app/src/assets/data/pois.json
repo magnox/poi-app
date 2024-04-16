@@ -262,5 +262,14 @@
     "latLng": [49.86589599790008, 8.925743467075081],
     "address": "Carlo-Mierendorff-Straße 17, 64823 Groß-Umstadt",
     "note": "Spieleecke"
+  },
+  {
+    "id": 32,
+    "name": "Zoo Vivarium",
+    "type": "Tiere",
+    "openingHours": "Hauptsaison: 9 - 18 Uhr",
+    "website": "http://www.zoo-vivarium.de/",
+    "latLng": [49.86589599790008, 8.925743467075081],
+    "address": "Schnampelweg 5, 64287 Darmstadt"
   }
 ]
