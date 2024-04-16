@@ -206,7 +206,7 @@ body {
 .l-popup-content {
   font-family: 'Arial', sans-serif;
   color: #333;
-  max-width: 250px;
+  max-width: 350px;
 }
 
 .l-popup-content h3 {
