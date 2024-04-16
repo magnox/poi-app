@@ -5,14 +5,14 @@
     "type": "Spielplatz",
     "latLng": [49.920812880164796, 8.991153170169223],
     "address": "Schaafheim",
-    "note": ""
+    "note": "Wenige Geräte, Seilbahn. Für einen kurzen Stopp okay."
   },
   {
     "id": 2,
     "name": "Spielplatz Schlossgarten",
     "type": "Spielplatz",
     "latLng": [49.89527652194212, 8.83763394133179],
-    "address": "Dieburf",
+    "address": "Dieburg",
     "note": ""
   },
   {
@@ -21,7 +21,7 @@
     "type": "Spielplatz",
     "latLng": [49.90007839250157, 8.837485783660176],
     "address": "Dieburg",
-    "note": "Riesige Kletternetze"
+    "note": "Großes Kletternetz, eher für größere Kinder"
   },
   {
     "id": 4,
@@ -228,5 +228,39 @@
     "website": "https://www.hessen-forst.de/freizeit/wildpark-alte-fasanerie-hanau",
     "latLng": [50.08535130157038, 8.91170376922434],
     "address": "Fasaneriestraße 106, 63456 Hanau"
+  },
+  {
+    "id": 28,
+    "name": "Kleines Felsenmeer",
+    "type": "Natur-Spielplatz",
+    "latLng": [49.739119408176954, 8.790429687775006],
+    "address": "Hauptstraße, 64405 Fischbachtal",
+    "note": "Klettern, Bachlauf, Wandertrail, nicht überlaufen"
+  },
+  {
+    "id": 29,
+    "name": "Eiscafé Galileo",
+    "type": "Restaurant",
+    "website": "http://www.eiscafe-galileo.de/main.php?seite=produkte",
+    "latLng": [49.96124059076524, 8.953658597956336],
+    "address": "Platanenallee 36, 64832 Babenhausen",
+    "note": "Plätze draußen am Wasser"
+  },
+  {
+    "id": 30,
+    "name": "Eiscafé LuCrem",
+    "type": "Restaurant",
+    "website": "http://www.lucrem.de/",
+    "latLng": [49.86830658210608, 8.928630553253612],
+    "address": "Ob. Marktstraße 1, 64823 Groß-Umstadt"
+  },
+  {
+    "id": 31,
+    "name": "Eisdiele Tivoli",
+    "type": "Restaurant",
+    "website": "https://www.eis-cafe-tivoli.de/",
+    "latLng": [49.86589599790008, 8.925743467075081],
+    "address": "Carlo-Mierendorff-Straße 17, 64823 Groß-Umstadt",
+    "note": "Spieleecke"
   }
 ]
