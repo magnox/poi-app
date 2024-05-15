@@ -271,5 +271,12 @@
     "website": "http://www.zoo-vivarium.de/",
     "latLng": [49.866515721162266, 8.68195254027975],
     "address": "Schnampelweg 5, 64287 Darmstadt"
+  },
+  {
+    "id": 33,
+    "name": "Spielplatz Schloßpark",
+    "type": "Spielplatz",
+    "latLng": [49.96028552931819, 8.953844201736533],
+    "address": "Platanenallee 28, 64832 Babenhausen"
   }
 ]
