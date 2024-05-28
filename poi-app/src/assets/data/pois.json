@@ -271,5 +271,14 @@
     "website": "http://www.zoo-vivarium.de/",
     "latLng": [49.866515721162266, 8.68195254027975],
     "address": "Schnampelweg 5, 64287 Darmstadt"
+  },
+  {
+    "id": 33,
+    "name": "Opel-Zoo",
+    "type": "Tiere",
+    "openingHours": "Hauptsaison: 9 - 18 Uhr",
+    "website": "http://www.opel-zoo.de/",
+    "latLng": [50.183949340397035, 8.48427505594783],
+    "address": "Am Opelzoo 3, 61476 Kronberg im Taunus"
   }
 ]
