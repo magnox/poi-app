@@ -274,6 +274,13 @@
   },
   {
     "id": 33,
+    "name": "Spielplatz Schloßpark",
+    "type": "Spielplatz",
+    "latLng": [49.96028552931819, 8.953844201736533],
+    "address": "Platanenallee 28, 64832 Babenhausen"
+  },
+  {
+    "id": 34,
     "name": "Opel-Zoo",
     "type": "Tiere",
     "openingHours": "Hauptsaison: 9 - 18 Uhr",
